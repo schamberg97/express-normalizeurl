@@ -1,7 +1,6 @@
 URL normalisation for Express.
 
-## Taking care about
-
+## Taking care of
 * trailing slashes
 * case sensitivity
 
