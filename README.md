@@ -2,8 +2,7 @@
 
 URL normalisation for Express.
 
-## Taking care about
-
+## Taking care of
 * trailing slashes
 * repeted slashes
 * case sensitivity
@@ -16,15 +15,28 @@ $ npm install express-url
 ## Usage
 ```js
 expurl = require('express-url');
-app.use(expurl);
+```
+
+### Temporary redirect (302)
+```js
+app.use(expurl.temp);
+```
+
+### Permanent redirect (301)
+* try temporary redirect first
+* think twice, maybe temporary redirect will suit your needs
+
+```js
+app.use(expurl.perm);
 ```
 
 ## Tests
 ```sh
+$ npm install
 $ npm test
 ```
 
-### Additional recommendation
+## Recommendation
 ```js
 app.set('case sensitive routing', true);
 app.set('strict routing', true);

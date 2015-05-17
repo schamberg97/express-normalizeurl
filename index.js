@@ -1,4 +1,4 @@
-module.exports = function(req, res, next) {
+var expurl = function(req, res, next, resStatus) {
 
     var hasUppecase = /[A-Z]/.test(req.url),
         hasParams = /\?/.test(req.url),
@@ -23,7 +23,7 @@ module.exports = function(req, res, next) {
             }
         }
         if (url !== req.url) {
-            res.redirect(302, req.url); // do not change 302 to 301 before testing
+            res.redirect(resStatus, req.url);
         } else {
             next();
         }
@@ -31,4 +31,15 @@ module.exports = function(req, res, next) {
         next();
     }
 
+}
+
+module.exports = {
+    perm :
+        function(req, res, next) {
+            expurl1(req, res, next, 301);
+        },
+    temp :
+        function(req, res, next) {
+            expurl(req, res, next, 302);
+        }
 }
