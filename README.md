@@ -1,7 +1,11 @@
+# express-url
+
 URL normalisation for Express.
 
-## Taking care of
+## Taking care about
+
 * trailing slashes
+* repeted slashes
 * case sensitivity
 
 ## Installation

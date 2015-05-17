@@ -2,7 +2,8 @@ module.exports = function(req, res, next) {
 
     var hasUppecase = /[A-Z]/.test(req.url),
         hasParams = /\?/.test(req.url),
-        hasSlash = /\/$/.test(req.url) || /\/\?/.test(req.url),
+        hasTrailingSlash = /\/$/.test(req.url) || /\/\?/.test(req.url),
+        hasRepetedSlash = /\/\/+/.test(req.url),
         isFile = /\.[0-9a-z]+$/i.test(req.url),
         isGET = (req.method === "GET");
 
@@ -11,7 +12,10 @@ module.exports = function(req, res, next) {
         if (hasUppecase) {
             req.url = req.url.toLowerCase();
         }
-        if (!hasSlash) {
+        if (hasRepetedSlash) {
+            req.url = req.url.replace(/\/\/+/, '/');
+        }
+        if (!hasTrailingSlash) {
             if (hasParams) {
                 req.url = req.url.split("?")[0] + '/?' + req.url.split("?")[1];
             } else {

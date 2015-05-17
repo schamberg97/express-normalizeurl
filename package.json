@@ -21,8 +21,12 @@
   "keywords": [
     "express",
     "url",
-    "trailing slash",
-    "lowercase"
+    "slash",
+    "lowercase",
+    "redirect",
+    "address",
+    "uri",
+    "path"
   ],
   "author": {
     "name": "Antuan Khanna",
