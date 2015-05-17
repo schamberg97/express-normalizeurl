@@ -22,11 +22,7 @@
     "express",
     "url",
     "slash",
-    "lowercase",
-    "redirect",
-    "address",
-    "uri",
-    "path"
+    "lowercase"
   ],
   "author": {
     "name": "Antuan Khanna",
