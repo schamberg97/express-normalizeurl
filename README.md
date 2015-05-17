@@ -15,7 +15,7 @@ $ npm install express-url
 
 ## Usage
 ```js
-expurl = require('./data_modules/express-url');
+expurl = require('express-url');
 app.use(expurl);
 ```
 
