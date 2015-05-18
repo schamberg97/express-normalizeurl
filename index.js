@@ -8,7 +8,7 @@ var expurl = function(req, res, next, resStatus) {
         isGET = (req.method === "GET");
 
     if (isGET && !isFile) {
-        url = req.url;
+        originalUrl = req.url;
         if (hasUppecase) {
             req.url = req.url.toLowerCase();
         }
@@ -22,7 +22,7 @@ var expurl = function(req, res, next, resStatus) {
                 req.url += '/';
             }
         }
-        if (url !== req.url) {
+        if (originalUrl !== req.url) {
             res.redirect(resStatus, req.url);
         } else {
             next();
@@ -36,7 +36,7 @@ var expurl = function(req, res, next, resStatus) {
 module.exports = {
     perm :
         function(req, res, next) {
-            expurl1(req, res, next, 301);
+            expurl(req, res, next, 301);
         },
     temp :
         function(req, res, next) {
