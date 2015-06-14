@@ -34,12 +34,10 @@ var expurl = function(req, res, next, resStatus) {
 }
 
 module.exports = {
-    perm :
-        function(req, res, next) {
-            expurl(req, res, next, 301);
-        },
-    temp :
-        function(req, res, next) {
-            expurl(req, res, next, 302);
-        }
+    perm: function(req, res, next) {
+        expurl(req, res, next, 301);
+    },
+    temp: function(req, res, next) {
+        expurl(req, res, next, 302);
+    }
 }
