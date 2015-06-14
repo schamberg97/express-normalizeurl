@@ -1,5 +1,4 @@
 # express-url
-
 URL normalisation for Express.
 
 ## Taking care of
@@ -31,12 +30,18 @@ app.use(expurl.perm);
 ```
 
 ## Tests
+You will need to point ```app``` variable in ```node_modules/express-url/routes.js``` to file with app routes.
+
 ```sh
 $ npm install
+$ cd node_modules/express-url
 $ npm test
 ```
 
-## Recommendation
+## Recommendations
+* do not serve static files with node dirctly
+* use case sensitive and strict routing
+
 ```js
 app.set('case sensitive routing', true);
 app.set('strict routing', true);
