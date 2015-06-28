@@ -1,10 +1,19 @@
 # express-url
 URL normalisation for Express.
 
-## Taking care of
+## About
+### Taking care of
 * trailing slashes
 * repeted slashes
 * case sensitivity
+
+### Redirect example
+```
+// request url
+http://example.com//sLuG?param=val
+// response url
+http://example.com/slug/?param=val 
+```
 
 ## Installation
 ```sh
@@ -12,16 +21,17 @@ $ npm install express-url
 ```
 
 ## Usage
+### Require
 ```js
 expurl = require('express-url');
 ```
 
-### Temporary redirect (302)
+### Use temporary redirect (302)
 ```js
 app.use(expurl.temp);
 ```
 
-### Permanent redirect (301)
+### Use permanent redirect (301)
 * try temporary redirect first
 * think twice, maybe temporary redirect will suit your needs
 
