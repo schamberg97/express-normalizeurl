@@ -6,7 +6,7 @@ var expurl = function(req, res, next, resStatus) {
         hasRepetedSlash = /\/\/+/.test(req.url),
         hasRepeatedQuestionMark = /\?{2,}/g.test(req.url),
         hasRepeatedAmpersand = /\&{2,}/g.test(req.url),
-        hasRepeatedQuery = /\?{1,}/g.test(req.url),
+        hasRepeatedQuery = /\?.*?(\?)/g.test(req.url),
         isFile = /\.[0-9a-z]+$/i.test(req.url),
         isGET = (req.method === "GET");
 
