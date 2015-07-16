@@ -7,6 +7,7 @@ URL normalisation for Express.
 * repeated slashes
 * repeated question marks
 * repeated ampersands
+* repeated query strings
 * case sensitivity
 
 ### Redirect example
