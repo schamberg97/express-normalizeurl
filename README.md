@@ -4,15 +4,17 @@ URL normalisation for Express.
 ## About
 ### Taking care of
 * trailing slashes
-* repeted slashes
+* repeated slashes
+* repeated question marks
+* repeated ampersands
 * case sensitivity
 
 ### Redirect example
 ```
 // request url
-http://example.com//sLuG?param=val
+http://example.com//sLuG??param=val&&param2=val2??param3=val3
 // response url
-http://example.com/slug/?param=val 
+http://example.com/slug/?param=val&param2=val2&param3=val3
 ```
 
 ## Installation
