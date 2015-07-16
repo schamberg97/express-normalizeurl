@@ -1,4 +1,4 @@
-var app = require('../../../app'); // should point to file with app routes
+// var app = require('../../../app'); // should point to file with app routes
 
 var should = require('should'),
     supertest = require('supertest');
@@ -20,7 +20,7 @@ describe('expurl', function() {
             .end(function(err, res) {
                 res.status.should.equal(302);
                 done();
-            })
+            });
     });
 
     it('should redirect urls without triling slash with params', function(done) {
@@ -29,7 +29,7 @@ describe('expurl', function() {
             .end(function(err, res) {
                 res.status.should.equal(302);
                 done();
-            })
+            });
     });
 
     it('should not redirect file urls', function(done) {
@@ -38,16 +38,43 @@ describe('expurl', function() {
             .end(function(err, res) {
                 res.status.should.not.equal(302);
                 done();
-            })
+            });
     });
 
-    it('should redirect when has repeted slashes', function(done) {
+    it('should redirect when has repeated slashes', function(done) {
         supertest(app)
             .get('//expurl//test//')
             .end(function(err, res) {
                 res.status.should.equal(302);
                 done();
-            })
+            });
+    });
+
+    it('should redirect when has repeated question marks', function(done) {
+        supertest(app)
+            .get('/expurl/test/??test')
+            .end(function(err, res) {
+                res.status.should.equal(302);
+                done();
+            });
+    });
+
+    it('should redirect when has repeated ampersands', function(done) {
+        supertest(app)
+            .get('/expurl/test/?test&&test')
+            .end(function(err, res) {
+                res.status.should.equal(302);
+                done();
+            });
+    });
+
+    it('should redirect when has repeated querys', function(done) {
+        supertest(app)
+            .get('/expurl/test/?test?test')
+            .end(function(err, res) {
+                res.status.should.equal(302);
+                done();
+            });
     });
 
 });
