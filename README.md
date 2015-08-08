@@ -27,7 +27,7 @@ $ npm install express-url
 ### As middelware
 ```js
 // Require module
-var express = require('express');
+var expurl = require('express-url');
 
 // Process routs through middleware
 app.use(expurl());
