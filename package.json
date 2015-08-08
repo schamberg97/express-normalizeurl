@@ -1,15 +1,14 @@
 {
   "name": "express-url",
-  "version": "1.2.1",
-  "description": "URL normalisation for Express",
+  "version": "1.3.0",
+  "description": "URL normalisation for Express and Connect",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "devDependencies": {
     "mocha": "^2.2.4",
-    "should": "^6.0.1",
-    "supertest": "^0.15.0"
+    "should": "^6.0.1"
   },
   "scripts": {
     "test": "mocha"
@@ -20,6 +19,7 @@
   },
   "keywords": [
     "express",
+    "connect",
     "url",
     "slash",
     "lowercase",
