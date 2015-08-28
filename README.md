@@ -29,7 +29,7 @@ $ npm install express-url
 // Require module
 var expurl = require('express-url');
 
-// Process routs through middleware
+// Process routes through middleware
 app.use(expurl());
 ```
 
@@ -55,7 +55,7 @@ $ npm test
 ```
 
 ## Recommendations
-* do not serve static files with node dirctly
+* do not serve static files with node directly
 * use case sensitive and strict routing
 
 ```js
