@@ -1,7 +1,7 @@
 {
   "name": "express-url",
-  "version": "1.3.0",
-  "description": "URL normalisation for Express and Connect",
+  "version": "1.4.0",
+  "description": "URL normalisation middleware for Express and Connect",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -32,7 +32,7 @@
   "author": {
     "name": "Antuan Khanna",
     "email": "antuan@antuankhanna.com",
-    "url": "http://www.antuankhanna.com"
+    "url": "https://www.antuankhanna.com"
   },
   "license": "MIT",
   "bugs": {
