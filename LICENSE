@@ -1,6 +1,9 @@
+Copyright for portions of Express-NormalizeUrl are held by Antuan Khanna (2015) as part of express-url. All other copyright for project Express-NormalizeUrl are held by Nikolay Schamberg & QUIK.Legal LLC (2019) and respective legal successors and licensed in perpetuity under MIT License.
+
 The MIT License (MIT)
 
-Copyright (c) 2015 Antuan Khanna
+Copyright (c) 2015 Antuan Khanna,
+Copyright (c) 2019 Nikolay Shamberg & QUIK.Legal LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
