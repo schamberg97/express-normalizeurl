@@ -91,7 +91,7 @@ describe('expurl', function() {
             repeatedSlash: true,
             repeatedQuestionMark: true,
             repeatedAmpersand: true
-        }, testUrl), '/slug/param=val&param2=val2');
+        }, testUrl), '/slug/?param=val&param2=val2');
     });
 
 });
