@@ -1,6 +1,6 @@
 {
   "name": "express-normalizeurl",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "URL normalisation for Express and Connect. Forked form @AntuanKhanna/express-url to serve as (almost) drop-in replacement and to maintain the unmaintained code.",
   "main": "index.js",
   "directories": {
