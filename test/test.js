@@ -72,7 +72,7 @@ describe('expurl', function() {
         }, testUrl), '//sLug??pAram=vAl&parAm2=vAl2');
     });
 
-    it('should redirect to beautiful URL, with unaffected queries', function() {
+    it('should redirect to beautiful URL, with unaffected case of the queries', function() {
         should.equal(expurl({
             lowercase: true,
             lowercaseQueries: false,
@@ -80,7 +80,7 @@ describe('expurl', function() {
             repeatedSlash: true,
             repeatedQuestionMark: true,
             repeatedAmpersand: true
-        }, testUrl), '/slug/?pAram=vAl&&parAm2=vAl2');
+        }, testUrl), '/slug/?pAram=vAl&parAm2=vAl2');
     });
     
     it('should redirect to beautiful URL, with lowercased queries', function() {
@@ -91,7 +91,7 @@ describe('expurl', function() {
             repeatedSlash: true,
             repeatedQuestionMark: true,
             repeatedAmpersand: true
-        }, testUrl), '/slug/param=val&&param2=val2');
+        }, testUrl), '/slug/param=val&param2=val2');
     });
 
 });
