@@ -1,5 +1,5 @@
 {
-  "name": "express-url",
+  "name": "express-normalizeurl",
   "version": "1.4.0",
   "description": "URL normalisation middleware for Express and Connect",
   "main": "index.js",
@@ -7,8 +7,8 @@
     "test": "test"
   },
   "devDependencies": {
-    "mocha": "^2.2.4",
-    "should": "^6.0.1"
+    "mocha": "6.1.4",
+    "should": "6.0.1"
   },
   "scripts": {
     "test": "mocha"
