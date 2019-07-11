@@ -39,7 +39,7 @@ app.use(expurl({
     requestType: 'GET',
     redirectStatusCode: 302, 
     lowercase: true,
-    lowercaseQueries: true, // Requires lowercase to be set to true
+    lowercaseQueries: true, // False by default, requires lowercase to be set to true to work
     trailingSlash: true,
     repeatedSlash: true,
     repeatedQuestionMark: true,
