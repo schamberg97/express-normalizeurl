@@ -21,8 +21,15 @@ var Url = {
     transform: function transform(options) {
         if (this.hasFileExtension) return this;
 
-        if (options.lowercase) this.url = this.url.toLowerCase();
-        if (options.repetedSlash) this.url = this.url.replace(/\/\/+/g, '/');
+        if (options.lowercase) {
+            const nodeUrl = require('url');
+            var urlParsed = nodeUrl.parse(this.url);
+            urlParsed.pathname = urlParsed.pathname.toLowerCase();
+            if (options.lowercaseQueries) urlParsed.search = urlParsed.search.toLowerCase();
+            this.url = nodeUrl.format(urlParsed);
+        };
+        if (options.repeatedSlash && (options.repetedSlash !== false)) this.url = this.url.replace(/\/\/+/g, '/');
+        // (options.repetedSlash !== false) is needed to maintain compatibility with express-url (due to weird typo in that project)
         if (options.repeatedQuestionMark) this.url = this.url.replace(/\?{2,}/g, '?');
         if (options.repeatedAmpersand) this.url = this.url.replace(/\&{2,}/g, '&');
         if (options.trailingSlash && !this.hasTrailingSlash) {
@@ -43,7 +50,7 @@ var optionsDefault = {
     redirectStatusCode: 302,
     lowercase: true,
     trailingSlash: true,
-    repetedSlash: true,
+    repeatedSlash: true,
     repeatedQuestionMark: true,
     repeatedAmpersand: true
 };
