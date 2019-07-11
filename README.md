@@ -1,4 +1,4 @@
-# express-url
+# Express-NormalizeUrl
 URL normalisation for Express and Connect
 
 ## About
@@ -9,12 +9,12 @@ URL normalisation for Express and Connect
 * repeated question marks
 * repeated ampersands
 * repeated query strings
-* case sensitivity
+* case sensitivity (does not affect queries by default)
 
 ### Redirect example
 ```
-request:  //sLuG??param=val&&param2=val2
-response: /slug/?param=val&param2=val2
+request:  //sLuG??param=val&&param2=VAL2
+response: /slug/?param=val&param2=VAL2
 ```
 
 ## Installation
@@ -33,12 +33,13 @@ var expurl = require('express-url');
 app.use(expurl());
 ```
 
-### Middelware options
+### Middleware options
 ```js
 app.use(expurl({
     requestType: 'GET',
     redirectStatusCode: 302,
     lowercase: true,
+    lowercaseQueries: true,
     trailingSlash: true,
     repetedSlash: true,
     repeatedQuestionMark: true,
