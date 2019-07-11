@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AntuanKhanna/express-url"
+    "url": "https://github.com/schamberg97/express-normalizeurl"
   },
   "keywords": [
     "express",
@@ -30,13 +30,12 @@
     "route"
   ],
   "author": {
-    "name": "Antuan Khanna",
-    "email": "antuan@antuankhanna.com",
-    "url": "https://www.antuankhanna.com"
+    "name": "Nikolay Shamberg",
+    "email": "nikolay@quik.legal"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AntuanKhanna/express-url/issues"
+    "url": "https://github.com/schamberg97/express-normalizeurl/issues"
   },
-  "homepage": "https://github.com/AntuanKhanna/express-url"
+  "homepage": "https://github.com/schamberg97/express-normalizeurl"
 }
