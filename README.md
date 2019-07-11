@@ -1,5 +1,5 @@
 # Express-NormalizeUrl
-URL normalisation for Express and Connect
+URL normalisation for Express and Connect. Forked form @AntuanKhanna/express-url
 
 ## About
 
