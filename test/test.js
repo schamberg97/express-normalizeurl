@@ -61,7 +61,7 @@ describe('expurl', function() {
         }, testUrl), '//sLug?pAram=vAl&&parAm2=vAl2');
     });
 
-    it('should redirect to URL without repeated question mark', function() {
+    it('should redirect to URL without repeated ampersand', function() {
         should.equal(expurl({
             lowercase: false,
             lowercaseQueries: false,
