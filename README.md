@@ -1,5 +1,5 @@
 # Express-NormalizeUrl
-URL normalisation for Express and Connect. Forked form @AntuanKhanna/express-url
+URL normalisation for Express and Connect. Forked form @AntuanKhanna/express-url to serve as (almost) drop-in replacement and to maintain the unmaintained code.
 
 ## About
 
@@ -37,11 +37,11 @@ app.use(expurl());
 ```js
 app.use(expurl({
     requestType: 'GET',
-    redirectStatusCode: 302,
+    redirectStatusCode: 302, 
     lowercase: true,
-    lowercaseQueries: true,
+    lowercaseQueries: true, // Requires lowercase to be set to true
     trailingSlash: true,
-    repetedSlash: true,
+    repeatedSlash: true,
     repeatedQuestionMark: true,
     repeatedAmpersand: true
 }));
