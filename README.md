@@ -13,6 +13,7 @@ URL normalisation for Express and Connect. Forked from @AntuanKhanna/express-url
 
 ### Redirect example
 ```
+//assuming default options (see Middleware options)
 request:  //sLuG??param=val&&param2=VAL2
 response: /slug/?param=val&param2=VAL2
 ```
@@ -40,7 +41,7 @@ app.use(expurl({
     requestType: 'GET',
     redirectStatusCode: 302, 
     lowercase: true,
-    lowercaseQueries: true, // False by default, requires lowercase to be set to true to work. If you want 100% compatibility with express-url, when lowercase is true, this also needs to be true
+    lowercaseQueries: false, // False by default, requires lowercase to be set to true to work. If you want 100% compatibility with express-url, when lowercase is true, this also needs to be set true
     trailingSlash: true,
     repeatedSlash: true,
     repeatedQuestionMark: true,
