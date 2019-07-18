@@ -1,5 +1,5 @@
 # Express-NormalizeUrl
-URL normalisation for Express and Connect. Forked form @AntuanKhanna/express-url to serve as (almost) drop-in replacement and to maintain the unmaintained code. (E.g. express-url had a typo, where "repeatedSlash" option was written as "repetedSlash". In that case, express-normalizeurl will respect both typing variants)
+URL normalisation for Express and Connect. Forked from @AntuanKhanna/express-url to serve as an (almost) drop-in replacement (please see Middleware options for that matter) for an unmaintained project.
 
 ## About
 
@@ -40,7 +40,7 @@ app.use(expurl({
     requestType: 'GET',
     redirectStatusCode: 302, 
     lowercase: true,
-    lowercaseQueries: true, // False by default, requires lowercase to be set to true to work
+    lowercaseQueries: true, // False by default, requires lowercase to be set to true to work. If you want 100% compatibility with express-url, when lowercase is true, this also needs to be true
     trailingSlash: true,
     repeatedSlash: true,
     repeatedQuestionMark: true,
