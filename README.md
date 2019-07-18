@@ -1,5 +1,5 @@
 # Express-NormalizeUrl
-URL normalisation for Express and Connect. Forked form @AntuanKhanna/express-url to serve as (almost) drop-in replacement and to maintain the unmaintained code.
+URL normalisation for Express and Connect. Forked form @AntuanKhanna/express-url to serve as (almost) drop-in replacement and to maintain the unmaintained code. (E.g. express-url had a typo, where "repeatedSlash" option was written as "repetedSlash". In that case, express-normalizeurl will respect both typing variants)
 
 ## About
 
@@ -27,6 +27,7 @@ $ npm install express-url
 ### As middelware
 ```js
 // Require module
+// If you used express-url before, this is the only line you need to change
 var expurl = require('express-normalizeurl');
 
 // Process routes through middleware
