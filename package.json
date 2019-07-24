@@ -27,7 +27,9 @@
     "rewriterule",
     "redirect",
     "middleware",
-    "route"
+    "route",
+    "normalize",
+    "url"
   ],
   "author": {
     "name": "Nikolay Shamberg",
