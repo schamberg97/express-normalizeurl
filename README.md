@@ -1,5 +1,5 @@
 # Express-NormalizeUrl
-URL normalisation for Express and Connect. Forked from @AntuanKhanna/express-url to serve as an (almost) drop-in replacement (please see Middleware options for that matter) for an unmaintained project.
+URL normalisation for Express and Connect. Forked from [@AntuanKhanna/express-url](https://github.com/AntuanKhanna/express-url) to serve as an (almost) drop-in replacement (please see Middleware options for that matter) for an unmaintained project.
 
 ## About
 
