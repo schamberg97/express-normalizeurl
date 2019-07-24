@@ -53,7 +53,7 @@ app.use(expurl({
 
 ```sh
 $ npm install
-$ cd node_modules/express-url
+$ cd node_modules/express-normalizeurl
 $ npm test
 ```
 
