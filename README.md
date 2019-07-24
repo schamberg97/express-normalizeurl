@@ -20,7 +20,7 @@ response: /slug/?param=val&param2=VAL2
 
 ## Installation
 ```sh
-$ npm install express-url
+$ npm install express-normalizeurl
 ```
 
 ## Usage
