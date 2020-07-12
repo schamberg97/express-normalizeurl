@@ -25,7 +25,7 @@ $ npm install express-normalizeurl
 
 ## Usage
 
-### As middelware
+### As middleware
 ```js
 // Require module
 // If you used express-url before, this is the only line you need to change
